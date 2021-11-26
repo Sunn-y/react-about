@@ -12,4 +12,35 @@ main {
   left: 0;
   width: 100vw;
   height: calc(100vh - 50px);
+  background-color: $green1;
+}
+
+div, span, p {
+  color: $green5;
+}
+
+
+h1 {
+  font-family: flower;
+  text-align: center;
+}
+
+.main-img {
+  margin: 64px auto;
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .main-img {
+    animation: main-img infinite 20s linear;
+  }
+}
+
+@keyframes main-img {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
