@@ -2,6 +2,7 @@
 import "./scss/styles.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
+import Carousel from "./components/Carousel";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -13,8 +14,9 @@ export default function App() {
     <Router>
       <div className="App">
         <Header />
+        <Carousel />
         <main>
-          <img src={Tree} alt="tree.png" className="main-img"/>
+          <img src={Tree} alt="tree.png" className="main-img" />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="about" element={<About />} />

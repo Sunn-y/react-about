@@ -1,0 +1,38 @@
+%arrow {
+  position: fixed;
+  z-index: 100;
+  top: calc((100vh - 50px) / 2);
+  width: 50px;
+  height: 50px;
+
+  &::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    border-top: 16px solid rgba($green5, 0.2);
+    border-right: 16px solid rgba($green5, 0.2);
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+.left-arrow {
+  @extend %arrow;
+
+  left: 32px;
+
+  &::after {
+    transform: rotate(225deg);
+  }
+}
+
+.right-arrow {
+  @extend %arrow;
+
+  right: 48px;
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}
